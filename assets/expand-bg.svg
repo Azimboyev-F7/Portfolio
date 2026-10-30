@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#150f45"/>
+      <stop offset="0.55" stop-color="#3a2be0"/>
+      <stop offset="1" stop-color="#ff7a59"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.35" r="0.6">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+  <g transform="translate(240,30) scale(0.7)">
+
+  <!-- CALIBER: university matches -->
+  <g>
+    <rect x="130" y="240" width="470" height="520" rx="30" fill="#ffffff"/>
+    <rect x="170" y="284" width="140" height="30" rx="15" fill="#e8e5ff"/>
+    <text x="240" y="305" text-anchor="middle" font-size="17" font-weight="700" fill="#4b3bff">CALIBER</text>
+    <text x="170" y="378" font-size="34" font-weight="700" fill="#15171a">University matches</text>
+    <g font-size="19" fill="#5b6068">
+      <text x="170" y="440">Match A</text><text x="530" y="440" text-anchor="end" font-weight="700" fill="#15171a">92%</text>
+      <text x="170" y="520">Match B</text><text x="530" y="520" text-anchor="end" font-weight="700" fill="#15171a">81%</text>
+      <text x="170" y="600">Match C</text><text x="530" y="600" text-anchor="end" font-weight="700" fill="#15171a">74%</text>
+    </g>
+    <rect x="170" y="456" width="360" height="12" rx="6" fill="#ebe9f7"/><rect x="170" y="456" width="331" height="12" rx="6" fill="#4b3bff"/>
+    <rect x="170" y="536" width="360" height="12" rx="6" fill="#ebe9f7"/><rect x="170" y="536" width="292" height="12" rx="6" fill="#4b3bff"/>
+    <rect x="170" y="616" width="360" height="12" rx="6" fill="#ebe9f7"/><rect x="170" y="616" width="266" height="12" rx="6" fill="#4b3bff"/>
+    <rect x="170" y="670" width="300" height="46" rx="23" fill="#15171a"/>
+    <text x="320" y="700" text-anchor="middle" font-size="18" font-weight="600" fill="#ffffff">Ask the AI coach</text>
+  </g>
+
+  <!-- MyTeacher: phone -->
+  <g>
+    <rect x="690" y="150" width="270" height="560" rx="44" fill="#15171a"/>
+    <rect x="706" y="166" width="238" height="528" rx="34" fill="#ffffff"/>
+    <rect x="780" y="182" width="90" height="22" rx="11" fill="#15171a"/>
+    <text x="730" y="256" font-size="22" font-weight="700" fill="#15171a">MyTeacher</text>
+    <rect x="730" y="284" width="190" height="76" rx="16" fill="#e8e5ff"/>
+    <rect x="746" y="302" width="110" height="12" rx="6" fill="#4b3bff"/><rect x="746" y="326" width="150" height="10" rx="5" fill="#b8b0ff"/>
+    <rect x="730" y="376" width="190" height="76" rx="16" fill="#f1f1ee"/>
+    <rect x="746" y="394" width="100" height="12" rx="6" fill="#8b8f97"/><rect x="746" y="418" width="140" height="10" rx="5" fill="#c9ccd2"/>
+    <rect x="730" y="468" width="190" height="76" rx="16" fill="#f1f1ee"/>
+    <rect x="746" y="486" width="120" height="12" rx="6" fill="#8b8f97"/><rect x="746" y="510" width="130" height="10" rx="5" fill="#c9ccd2"/>
+    <rect x="730" y="590" width="190" height="52" rx="26" fill="#4b3bff"/>
+    <text x="825" y="623" text-anchor="middle" font-size="18" font-weight="600" fill="#ffffff">Start lesson</text>
+  </g>
+
+  <!-- TexnoFazo: ERP table + Telegram message -->
+  <g>
+    <rect x="1050" y="330" width="430" height="300" rx="28" fill="#ffffff"/>
+    <text x="1086" y="388" font-size="26" font-weight="700" fill="#15171a">Client list</text>
+    <g fill="#ebe9f7"><rect x="1086" y="416" width="358" height="16" rx="8"/><rect x="1086" y="458" width="358" height="16" rx="8"/><rect x="1086" y="500" width="358" height="16" rx="8"/></g>
+    <g fill="#4b3bff"><rect x="1086" y="416" width="230" height="16" rx="8"/><rect x="1086" y="458" width="280" height="16" rx="8"/><rect x="1086" y="500" width="180" height="16" rx="8"/></g>
+    <rect x="1086" y="548" width="140" height="44" rx="22" fill="#e8e5ff"/>
+    <text x="1156" y="577" text-anchor="middle" font-size="17" font-weight="700" fill="#4b3bff">TexnoFazo</text>
+  </g>
+  <g>
+    <rect x="1130" y="680" width="360" height="130" rx="28" fill="#2aabee"/>
+    <rect x="1130" y="680" width="360" height="130" rx="28" fill="#2aabee"/>
+    <circle cx="1180" cy="730" r="22" fill="#ffffff" fill-opacity="0.9"/>
+    <path d="M1170 732l8 4 14-12-10 16z" fill="#2aabee"/>
+    <text x="1220" y="724" font-size="20" font-weight="700" fill="#ffffff">Telegram bot</text>
+    <text x="1220" y="756" font-size="17" fill="#ffffff" fill-opacity="0.92">Your goods list is ready</text>
+    <rect x="1220" y="772" width="200" height="10" rx="5" fill="#ffffff" fill-opacity="0.5"/>
+  </g>
+
+  <path d="M160 880 C 520 820, 760 900, 1100 860 S 1420 820, 1480 840" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 14"/>
+  </g>
+</svg>
