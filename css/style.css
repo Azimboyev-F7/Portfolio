@@ -192,7 +192,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   /* let the head rise above the panel while the shoulders stay inside its rounded base */
   clip-path: inset(-26% 0 0 0 round 0 0 var(--radius) var(--radius));
 }
-.portrait img { position: absolute; left: -9%; bottom: 0; width: 118%; max-width: none; height: auto; display: block; }
+.portrait img { position: absolute; left: -9%; bottom: 0; width: 118%; max-width: none; height: auto; display: block; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 5%); mask-image: linear-gradient(to bottom, transparent 0, #000 5%); }
 .portrait-caption { display: grid; gap: 0.15rem; margin-top: var(--space-2); }
 .portrait-caption strong { font: 700 var(--step-1)/1.2 var(--font-display); }
 .portrait-caption span { color: var(--text-muted); font-size: 0.95rem; }
