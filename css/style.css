@@ -184,24 +184,35 @@ ul { margin: 0; padding: 0; list-style: none; }
 .hero-lead { font-size: var(--step-1); color: var(--text-muted); max-width: 36rem; line-height: 1.5; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: var(--space-4); }
 
-.hero-card { padding: var(--space-3); position: relative; overflow: hidden; }
-.hero-card::before {
-  content: ""; position: absolute; inset: -40% -30% auto auto; width: 70%; aspect-ratio: 1;
-  background: radial-gradient(closest-side, var(--accent-soft), transparent); z-index: 0;
-}
-.hero-card > * { position: relative; }
+.hero-card { position: relative; max-width: 22rem; justify-self: center; width: 100%; }
 .portrait {
-  aspect-ratio: 1; border-radius: var(--radius-sm); margin-bottom: var(--space-3);
-  background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 40%, #ff7a59));
-  display: grid; place-items: center; color: var(--accent-ink);
-  font: 700 clamp(3rem, 5vw, 4.5rem) var(--font-display); overflow: hidden;
+  position: relative; aspect-ratio: 1; margin-top: var(--space-4);
+  background: linear-gradient(145deg, var(--accent), color-mix(in srgb, var(--accent) 45%, #ff7a59));
+  border-radius: var(--radius);
+  /* let the head rise above the panel while the shoulders stay inside its rounded base */
+  clip-path: inset(-26% 0 0 0 round 0 0 var(--radius) var(--radius));
 }
-.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
-.facts { display: grid; gap: 0.7rem; font-size: 0.95rem; }
-.facts li { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px dashed var(--line); padding-bottom: 0.7rem; }
-.facts li:last-child { border: 0; padding: 0; }
-.facts span:first-child { color: var(--text-muted); }
-.facts span:last-child { font-weight: 600; text-align: right; }
+.portrait img { position: absolute; left: -9%; bottom: 0; width: 118%; max-width: none; height: auto; display: block; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 5%); mask-image: linear-gradient(to bottom, transparent 0, #000 5%); }
+.proof { list-style: none; margin: 0; padding: 0; }
+.proof li {
+  position: absolute; display: grid; gap: 0.1rem; padding: 0.6rem 0.95rem; border-radius: 14px;
+  background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow);
+}
+.proof b { font: 700 0.95rem/1.2 var(--font-display); }
+.proof span { color: var(--text-muted); font-size: 0.85rem; }
+.proof li:nth-child(1) { left: -2.25rem; top: 30%; }
+.proof li:nth-child(2) { right: -1.5rem; top: 60%; }
+.proof li:nth-child(3) { left: 12%; bottom: -1.1rem; }
+.portrait-stage { position: relative; }
+.hero-card { margin-bottom: 1.5rem; }
+.facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); margin: 2.75rem 0 0; padding-top: var(--space-2); border-top: 1px dashed var(--line); }
+.facts div { display: grid; gap: 0.25rem; align-content: start; }
+.facts dt { color: var(--text-muted); font-size: 0.9rem; }
+.facts dd { margin: 0; font-weight: 600; font-size: 1.05rem; line-height: 1.3; }
+@media (max-width: 960px) {
+  .proof { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: var(--space-2); }
+  .proof li { position: static; }
+}
 
 /* Stats */
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3); margin-top: var(--space-5); border-top: 1px solid var(--line); }
@@ -371,7 +382,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 .hero h1 .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.12em; margin-bottom: -0.12em; }
 .hero h1 .w > span { display: inline-block; transform: translateY(105%); animation: wordUp 0.9s var(--ease) forwards; animation-delay: calc(0.2s + var(--i) * 0.07s); }
 .status::before { animation: ping 1.8s ease-out infinite; }
-.hero-card::before { animation: drift 9s ease-in-out infinite alternate; }
 
 /* Staggered reveals */
 .reveal { transition-delay: calc(var(--i, 0) * 80ms); }
@@ -408,7 +418,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .hero-copy .status, .hero-copy .hero-lead, .hero-copy .hero-cta { opacity: 1; animation: none; }
   .hero-pop { animation: none; }
   .hero h1 .w > span { transform: none; animation: none; }
-  .marquee-track, .hero-card::before, .status::before { animation: none; }
+  .marquee-track, .status::before { animation: none; }
   .timeline::before, .t-item::before { transform: none; }
   .project:hover, .skill-card:hover, .t-item:hover, .ach:hover, .tag:hover { transform: none; }
 }
