@@ -203,7 +203,12 @@ ul { margin: 0; padding: 0; list-style: none; }
 .proof li:nth-child(1) { left: -2.25rem; top: 30%; }
 .proof li:nth-child(2) { right: -1.5rem; top: 60%; }
 .proof li:nth-child(3) { left: 12%; bottom: -1.1rem; }
+.portrait-stage { position: relative; }
 .hero-card { margin-bottom: 1.5rem; }
+.facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); margin: 2.75rem 0 0; padding-top: var(--space-2); border-top: 1px dashed var(--line); }
+.facts div { display: grid; gap: 0.25rem; align-content: start; }
+.facts dt { color: var(--text-muted); font-size: 0.9rem; }
+.facts dd { margin: 0; font-weight: 600; font-size: 1.05rem; line-height: 1.3; }
 @media (max-width: 960px) {
   .proof { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: var(--space-2); }
   .proof li { position: static; }
