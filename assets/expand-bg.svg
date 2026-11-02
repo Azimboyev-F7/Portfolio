@@ -1,72 +1,139 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Arial, sans-serif">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#150f45"/>
-      <stop offset="0.55" stop-color="#3a2be0"/>
-      <stop offset="1" stop-color="#ff7a59"/>
+      <stop offset="0" stop-color="#120c3d"/>
+      <stop offset="0.55" stop-color="#3427c9"/>
+      <stop offset="1" stop-color="#e8684a"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0.5" cy="0.35" r="0.6">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.28"/>
+    <radialGradient id="glow" cx="0.5" cy="0.32" r="0.55">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.26"/>
       <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="warm" cx="0.86" cy="0.9" r="0.4">
+      <stop offset="0" stop-color="#ffb08a" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#ffb08a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+    <filter id="lift" x="-25%" y="-20%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#08042b" flood-opacity="0.5"/>
+    </filter>
+    <filter id="lift-sm" x="-25%" y="-30%" width="150%" height="200%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#08042b" flood-opacity="0.4"/>
+    </filter>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4b3bff"/>
+      <stop offset="1" stop-color="#7a6bff"/>
+    </linearGradient>
   </defs>
+
   <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
   <rect width="1600" height="1000" fill="url(#glow)"/>
-  <g transform="translate(240,30) scale(0.7)">
+  <rect width="1600" height="1000" fill="url(#warm)"/>
 
-  <!-- CALIBER: university matches -->
-  <g>
-    <rect x="130" y="240" width="470" height="520" rx="30" fill="#ffffff"/>
-    <rect x="170" y="284" width="140" height="30" rx="15" fill="#e8e5ff"/>
-    <text x="240" y="305" text-anchor="middle" font-size="17" font-weight="700" fill="#4b3bff">CALIBER</text>
-    <text x="170" y="378" font-size="34" font-weight="700" fill="#15171a">University matches</text>
-    <g font-size="19" fill="#5b6068">
-      <text x="170" y="440">Match A</text><text x="530" y="440" text-anchor="end" font-weight="700" fill="#15171a">92%</text>
-      <text x="170" y="520">Match B</text><text x="530" y="520" text-anchor="end" font-weight="700" fill="#15171a">81%</text>
-      <text x="170" y="600">Match C</text><text x="530" y="600" text-anchor="end" font-weight="700" fill="#15171a">74%</text>
+  <g transform="translate(298,8) scale(0.62)">
+
+    <!-- Flow: the three products are linked by one thread -->
+    <g fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 14">
+      <path d="M600 500 C 650 500, 650 560, 690 560"/>
+      <path d="M960 560 C 1010 560, 1010 480, 1050 480"/>
     </g>
-    <rect x="170" y="456" width="360" height="12" rx="6" fill="#ebe9f7"/><rect x="170" y="456" width="331" height="12" rx="6" fill="#4b3bff"/>
-    <rect x="170" y="536" width="360" height="12" rx="6" fill="#ebe9f7"/><rect x="170" y="536" width="292" height="12" rx="6" fill="#4b3bff"/>
-    <rect x="170" y="616" width="360" height="12" rx="6" fill="#ebe9f7"/><rect x="170" y="616" width="266" height="12" rx="6" fill="#4b3bff"/>
-    <rect x="170" y="670" width="300" height="46" rx="23" fill="#15171a"/>
-    <text x="320" y="700" text-anchor="middle" font-size="18" font-weight="600" fill="#ffffff">Ask the AI coach</text>
-  </g>
+    <g fill="#ffffff">
+      <circle cx="600" cy="500" r="9"/><circle cx="690" cy="560" r="9"/>
+      <circle cx="960" cy="560" r="9"/><circle cx="1050" cy="480" r="9"/>
+    </g>
 
-  <!-- MyTeacher: phone -->
-  <g>
-    <rect x="690" y="150" width="270" height="560" rx="44" fill="#15171a"/>
-    <rect x="706" y="166" width="238" height="528" rx="34" fill="#ffffff"/>
-    <rect x="780" y="182" width="90" height="22" rx="11" fill="#15171a"/>
-    <text x="730" y="256" font-size="22" font-weight="700" fill="#15171a">MyTeacher</text>
-    <rect x="730" y="284" width="190" height="76" rx="16" fill="#e8e5ff"/>
-    <rect x="746" y="302" width="110" height="12" rx="6" fill="#4b3bff"/><rect x="746" y="326" width="150" height="10" rx="5" fill="#b8b0ff"/>
-    <rect x="730" y="376" width="190" height="76" rx="16" fill="#f1f1ee"/>
-    <rect x="746" y="394" width="100" height="12" rx="6" fill="#8b8f97"/><rect x="746" y="418" width="140" height="10" rx="5" fill="#c9ccd2"/>
-    <rect x="730" y="468" width="190" height="76" rx="16" fill="#f1f1ee"/>
-    <rect x="746" y="486" width="120" height="12" rx="6" fill="#8b8f97"/><rect x="746" y="510" width="130" height="10" rx="5" fill="#c9ccd2"/>
-    <rect x="730" y="590" width="190" height="52" rx="26" fill="#4b3bff"/>
-    <text x="825" y="623" text-anchor="middle" font-size="18" font-weight="600" fill="#ffffff">Start lesson</text>
-  </g>
+    <!-- CALIBER: university matches -->
+    <g filter="url(#lift)">
+      <rect x="130" y="240" width="470" height="520" rx="32" fill="#ffffff"/>
+    </g>
+    <rect x="170" y="280" width="128" height="34" rx="17" fill="#e8e5ff"/>
+    <circle cx="190" cy="297" r="6" fill="#4b3bff"/>
+    <text x="206" y="303" font-size="16" font-weight="700" fill="#4b3bff" letter-spacing="1">CALIBER</text>
+    <text x="170" y="372" font-size="34" font-weight="700" fill="#15171a">University matches</text>
+    <text x="170" y="402" font-size="17" fill="#6a6f78">Ranked from your profile</text>
 
-  <!-- TexnoFazo: ERP table + Telegram message -->
-  <g>
-    <rect x="1050" y="330" width="430" height="300" rx="28" fill="#ffffff"/>
+    <g>
+      <circle cx="190" cy="456" r="17" fill="#4b3bff"/><text x="190" y="462" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">A</text>
+      <text x="220" y="452" font-size="19" font-weight="600" fill="#15171a">Best fit</text>
+      <text x="530" y="452" text-anchor="end" font-size="19" font-weight="700" fill="#15171a">92%</text>
+      <rect x="220" y="466" width="310" height="10" rx="5" fill="#ebe9f7"/><rect x="220" y="466" width="285" height="10" rx="5" fill="url(#accent)"/>
+
+      <circle cx="190" cy="532" r="17" fill="#8a7fff"/><text x="190" y="538" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">B</text>
+      <text x="220" y="528" font-size="19" font-weight="600" fill="#15171a">Strong match</text>
+      <text x="530" y="528" text-anchor="end" font-size="19" font-weight="700" fill="#15171a">81%</text>
+      <rect x="220" y="542" width="310" height="10" rx="5" fill="#ebe9f7"/><rect x="220" y="542" width="251" height="10" rx="5" fill="#8a7fff"/>
+
+      <circle cx="190" cy="608" r="17" fill="#c4bdff"/><text x="190" y="614" text-anchor="middle" font-size="16" font-weight="700" fill="#3a2fa8">C</text>
+      <text x="220" y="604" font-size="19" font-weight="600" fill="#15171a">Reach</text>
+      <text x="530" y="604" text-anchor="end" font-size="19" font-weight="700" fill="#15171a">74%</text>
+      <rect x="220" y="618" width="310" height="10" rx="5" fill="#ebe9f7"/><rect x="220" y="618" width="229" height="10" rx="5" fill="#c4bdff"/>
+    </g>
+
+    <rect x="170" y="676" width="390" height="52" rx="26" fill="#15171a"/>
+    <path d="M232 690 L238 700 L248 702 L238 704 L232 714 L226 704 L216 702 L226 700z" fill="#ffb08a"/>
+    <text x="396" y="709" text-anchor="middle" font-size="19" font-weight="600" fill="#ffffff">Ask the AI coach</text>
+
+    <!-- MyTeacher: phone -->
+    <g filter="url(#lift)">
+      <rect x="690" y="150" width="270" height="600" rx="48" fill="#15171a"/>
+    </g>
+    <rect x="704" y="164" width="242" height="572" rx="38" fill="#ffffff"/>
+    <rect x="782" y="178" width="86" height="22" rx="11" fill="#15171a"/>
+    <circle cx="742" cy="262" r="20" fill="url(#accent)"/>
+    <text x="742" y="269" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">M</text>
+    <text x="774" y="258" font-size="21" font-weight="700" fill="#15171a">MyTeacher</text>
+    <text x="774" y="280" font-size="14" fill="#6a6f78">Lesson 4 of 8</text>
+    <rect x="726" y="306" width="198" height="8" rx="4" fill="#ebe9f7"/><rect x="726" y="306" width="104" height="8" rx="4" fill="#4b3bff"/>
+
+    <rect x="726" y="338" width="198" height="84" rx="18" fill="#e8e5ff"/>
+    <circle cx="756" cy="380" r="16" fill="#4b3bff"/><path d="M750 380 l5 5 l9 -10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="784" y="366" width="108" height="12" rx="6" fill="#4b3bff"/><rect x="784" y="388" width="84" height="10" rx="5" fill="#a79fff"/>
+
+    <rect x="726" y="436" width="198" height="84" rx="18" fill="#f3f2ee"/>
+    <circle cx="756" cy="478" r="16" fill="#ff7a59"/><text x="756" y="484" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">2</text>
+    <rect x="784" y="464" width="96" height="12" rx="6" fill="#8b8f97"/><rect x="784" y="486" width="76" height="10" rx="5" fill="#cfd2d8"/>
+
+    <rect x="726" y="534" width="198" height="84" rx="18" fill="#f3f2ee"/>
+    <circle cx="756" cy="576" r="16" fill="#c9ccd2"/><text x="756" y="582" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">3</text>
+    <rect x="784" y="562" width="104" height="12" rx="6" fill="#8b8f97"/><rect x="784" y="584" width="70" height="10" rx="5" fill="#cfd2d8"/>
+
+    <rect x="726" y="652" width="198" height="54" rx="27" fill="url(#accent)"/>
+    <text x="825" y="686" text-anchor="middle" font-size="19" font-weight="600" fill="#ffffff">Start lesson</text>
+
+    <!-- TexnoFazo: ERP table -> Telegram message -->
+    <g filter="url(#lift)">
+      <rect x="1050" y="330" width="430" height="310" rx="30" fill="#ffffff"/>
+    </g>
     <text x="1086" y="388" font-size="26" font-weight="700" fill="#15171a">Client list</text>
-    <g fill="#ebe9f7"><rect x="1086" y="416" width="358" height="16" rx="8"/><rect x="1086" y="458" width="358" height="16" rx="8"/><rect x="1086" y="500" width="358" height="16" rx="8"/></g>
-    <g fill="#4b3bff"><rect x="1086" y="416" width="230" height="16" rx="8"/><rect x="1086" y="458" width="280" height="16" rx="8"/><rect x="1086" y="500" width="180" height="16" rx="8"/></g>
-    <rect x="1086" y="548" width="140" height="44" rx="22" fill="#e8e5ff"/>
-    <text x="1156" y="577" text-anchor="middle" font-size="17" font-weight="700" fill="#4b3bff">TexnoFazo</text>
-  </g>
-  <g>
-    <rect x="1130" y="680" width="360" height="130" rx="28" fill="#2aabee"/>
-    <rect x="1130" y="680" width="360" height="130" rx="28" fill="#2aabee"/>
-    <circle cx="1180" cy="730" r="22" fill="#ffffff" fill-opacity="0.9"/>
-    <path d="M1170 732l8 4 14-12-10 16z" fill="#2aabee"/>
-    <text x="1220" y="724" font-size="20" font-weight="700" fill="#ffffff">Telegram bot</text>
-    <text x="1220" y="756" font-size="17" fill="#ffffff" fill-opacity="0.92">Your goods list is ready</text>
-    <rect x="1220" y="772" width="200" height="10" rx="5" fill="#ffffff" fill-opacity="0.5"/>
-  </g>
+    <rect x="1370" y="364" width="74" height="30" rx="15" fill="#e8e5ff"/>
+    <text x="1407" y="385" text-anchor="middle" font-size="14" font-weight="700" fill="#4b3bff" letter-spacing="1">ERP</text>
+    <g font-size="14" fill="#8b8f97" font-weight="600" letter-spacing="1">
+      <text x="1086" y="436">CLIENT</text><text x="1444" y="436" text-anchor="end">ITEMS</text>
+    </g>
+    <path d="M1086 450 H1444" stroke="#ebe9f7" stroke-width="2"/>
+    <g>
+      <circle cx="1100" cy="486" r="14" fill="#e8e5ff"/><rect x="1128" y="479" width="130" height="14" rx="7" fill="#15171a" fill-opacity="0.82"/>
+      <rect x="1394" y="479" width="50" height="14" rx="7" fill="#4b3bff"/>
+      <circle cx="1100" cy="532" r="14" fill="#ffe3d9"/><rect x="1128" y="525" width="104" height="14" rx="7" fill="#15171a" fill-opacity="0.82"/>
+      <rect x="1404" y="525" width="40" height="14" rx="7" fill="#4b3bff" fill-opacity="0.7"/>
+      <circle cx="1100" cy="578" r="14" fill="#dff3fc"/><rect x="1128" y="571" width="118" height="14" rx="7" fill="#15171a" fill-opacity="0.82"/>
+      <rect x="1384" y="571" width="60" height="14" rx="7" fill="#4b3bff" fill-opacity="0.5"/>
+    </g>
 
-  <path d="M160 880 C 520 820, 760 900, 1100 860 S 1420 820, 1480 840" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 14"/>
+    <!-- hand-off arrow from the table to the Telegram bot -->
+    <path d="M1265 640 C 1265 662, 1265 666, 1265 684" fill="none" stroke="#ffffff" stroke-opacity="0.9" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 12"/>
+    <path d="M1253 676 l12 14 l12 -14" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <g filter="url(#lift-sm)">
+      <rect x="1100" y="704" width="330" height="108" rx="30" fill="#2aabee"/>
+    </g>
+    <circle cx="1150" cy="758" r="26" fill="#ffffff"/>
+    <path d="M1139 760 l22 -10 l-6 22 l-6 -8 l-6 5z" fill="#2aabee"/>
+    <text x="1192" y="748" font-size="21" font-weight="700" fill="#ffffff">Telegram bot</text>
+    <text x="1192" y="778" font-size="17" fill="#ffffff" fill-opacity="0.95">Your goods list is ready</text>
+    <text x="1408" y="738" text-anchor="end" font-size="13" fill="#ffffff" fill-opacity="0.8">now</text>
   </g>
 </svg>
